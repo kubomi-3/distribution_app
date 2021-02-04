@@ -21,6 +21,12 @@ Twitterなど自ら発信していなくても投票するだけで多彩かつ�
 
 # DEMO
 
+## トップページ
+https://user-images.githubusercontent.com/75615431/106873374-bc89fa80-6717-11eb-8ce8-81d7be4c560f.mp4
+
+投稿された題材のタイトルが一覧で表示されます。題材をクリックすると題材詳細画面へ遷移します。
+
+
 # 工夫したポイント
 
 このアプリにおいて最も大切なものの一つは正確性だと考えています。なのでユーザー登録をしないと投票はできず、
@@ -88,11 +94,11 @@ VSCode
 
 ### Association
 
--has_many :subjects
--has_many :comments
--has_many :ans_1
--has_many :ans_2
--has_many :ans_3
+- has_many :subjects
+- has_many :comments
+- has_many :ans_1
+- has_many :ans_2
+- has_many :ans_3
 
 ## subjects テーブル
 
@@ -104,11 +110,11 @@ VSCode
 
 ### Association
 
--has_many :comments
--belongs_to :user
--has_many :ans_1
--has_many :ans_2
--has_many :ans_3
+- has_many :comments
+- belongs_to :user
+- has_many :ans_1
+- has_many :ans_2
+- has_many :ans_3
 
 ## ans_1s テーブル
 
@@ -119,8 +125,8 @@ VSCode
 
 ### Association
 
--belongs_to :user
--belongs_to :subject
+- belongs_to :user
+- belongs_to :subject
 
 ## ans_2s テーブル
 
@@ -131,8 +137,8 @@ VSCode
 
 ### Association
 
--belongs_to :user
--belongs_to :subject
+- belongs_to :user
+- belongs_to :subject
 
 ## ans_3s テーブル
 
@@ -143,8 +149,8 @@ VSCode
 
 ### Association
 
--belongs_to :user
--belongs_to :subject
+- belongs_to :user
+- belongs_to :subject
 
 ## comments テーブル
 
@@ -156,5 +162,5 @@ VSCode
 
 ### Association
 
--belongs_to :user
--belongs_to :subject
+- belongs_to :user
+- belongs_to :subject
