@@ -1,0 +1,13 @@
+<% if @subjects.empty? %>
+  <div class="content">
+    <h3>まだ投稿されていません</h3>
+    </div>
+  <% else %>
+    <div class="contents">
+      <% @subjects.each do |subject| %>
+        <div class="content">
+          <%= link_to "#{subject.title}", subject_path(subject.id), class: "content_title" %>
+        </div>
+      <% end %>
+    </div> 
+<% end %>

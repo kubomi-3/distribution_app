@@ -1,0 +1,22 @@
+<div class="form_box">
+  <h2>新規投稿</h2>
+  <div class="from">
+    <%= form_with model: @subject, local: true do |f| %>
+      <div class="box">
+        <div class="form_tag">
+          タイトル：
+        </div> 
+        <%= f.text_area :title, class: "from_text", size: "50" %>
+      </div>
+      <div class="box">
+        <div class="box_tag" >
+          詳細説明：
+        </div>
+        <%= f.text_area :text, class: "form_text", size: "50" %>
+      </div>
+      <div class="box">
+        <%= f.submit "投稿する", class: "from_btn" %>
+      </div>
+    <% end %>
+  </div>
+</div>

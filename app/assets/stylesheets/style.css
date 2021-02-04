@@ -1,0 +1,78 @@
+/* サインイン、サインアウト画面 */
+.registration_box, .session_box {
+  margin: 30px 0 0 500px;
+}
+/* ヘッダー */
+header {
+  background-color: teal;
+  height: 50px;
+  display: flex;
+  justify-content: space-around;
+}
+.header_title {
+  height: 50px;
+  margin: 0;
+}
+.header_link, .nav_link {
+  text-decoration: none;
+  color: white;
+}
+.header_nav {
+  line-height: 50px;
+}
+
+/* 一覧画面 */
+.content {
+  width: 600px;
+  margin: 15px 0 5px 400px;
+}
+.content_title {
+  color: blue;
+  text-decoration: none;
+  font-size: large;
+}
+
+/* 投稿画面 */
+.form_box {
+  margin: 30px 0 0 450px;
+}
+.box {
+  display: flex;
+  margin-top: 10px;
+}
+
+/* 主題詳細画面 */
+.show_box {
+  margin: 30px 0 0 400px;
+  width: 600px;
+}
+.show_text {
+  margin-top: 20px;
+}
+.del_box {
+  margin-top: 20px;
+  text-align: right;
+}
+.del {
+  border: 2px solid red;
+  color: red;
+  text-decoration: none;
+}
+.call {
+  color: green;
+}
+.comment_form {
+  margin-top: 30px;
+}
+/* マイページ */
+.myp_box {
+  margin: 30px 0 0 400px;
+  width: 600px;
+}
+.mytext {
+  text-decoration: none;
+  color: blue;
+}
+.post {
+  margin-bottom: 10px;
+}
