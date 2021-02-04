@@ -1,0 +1,44 @@
+<div class="myp_box">
+  <h2><%= "#{@user.nickname}さん" %></h2>
+  <div class="info">
+    <h3>投稿</h3>
+    <% @user.subjects.reverse.each do |subject| %>
+      <div class="post">
+        <%= link_to "#{subject.title}", subject_path(subject.id), class: "mytext" %>
+      </div>
+    <% end %>
+    <h3>a</h3>
+    <% @user.ans_1s.reverse.each do |ans_1| %>
+      <div class="vote">
+        <%= link_to "#{ans_1.subject.title}", subject_path(ans_1.subject.id), class: "mytext" %>
+        <% @user.comments.each do |comment| %>
+          <% if comment.subject_id == ans_1.subject.id %>
+            (コメント有）<% break %> 
+          <% end %>
+        <% end %>
+      </div>
+    <% end %>
+    <h3>b</h3>
+    <% @user.ans_2s.reverse.each do |ans_2| %>
+      <div class="vote">
+        <%= link_to "#{ans_2.subject.title}", subject_path(ans_2.subject.id), class: "mytext" %>
+        <% @user.comments.each do |comment| %>
+          <% if comment.subject_id == ans_2.subject.id %>
+            (コメント有）<% break %> 
+          <% end %>
+        <% end %>
+      </div>
+    <% end %>
+    <h3>c</h3>
+    <% @user.ans_3s.reverse.each do |ans_3| %>
+      <div class="vote">
+        <%= link_to "#{ans_3.subject.title}", subject_path(ans_3.subject.id), class: "mytext" %>
+        <% @user.comments.each do |comment| %>
+          <% if comment.subject_id == ans_3.subject.id %>
+            (コメント有）<% break %> 
+          <% end %>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+</div>
