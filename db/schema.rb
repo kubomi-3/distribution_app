@@ -17,8 +17,8 @@ ActiveRecord::Schema.define(version: 2021_02_02_050841) do
     t.bigint "subject_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["subject_id"], name: "index_ans_1s_on_subject_id"
-    t.index ["user_id"], name: "index_ans_1s_on_user_id"
+    t.index ["subject_id"], name: "index_ans1s_on_subject_id"
+    t.index ["user_id"], name: "index_ans1s_on_user_id"
   end
 
   create_table "ans2s", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -26,17 +26,17 @@ ActiveRecord::Schema.define(version: 2021_02_02_050841) do
     t.bigint "subject_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["subject_id"], name: "index_ans_2s_on_subject_id"
-    t.index ["user_id"], name: "index_ans_2s_on_user_id"
+    t.index ["subject_id"], name: "index_ans2s_on_subject_id"
+    t.index ["user_id"], name: "index_ans2s_on_user_id"
   end
 
-  create_table "ans_3s", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "ans3s", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.bigint "subject_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["subject_id"], name: "index_ans_3s_on_subject_id"
-    t.index ["user_id"], name: "index_ans_3s_on_user_id"
+    t.index ["subject_id"], name: "index_ans3s_on_subject_id"
+    t.index ["user_id"], name: "index_ans3s_on_user_id"
   end
 
   create_table "comments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -75,8 +75,8 @@ ActiveRecord::Schema.define(version: 2021_02_02_050841) do
   add_foreign_key "ans1s", "users"
   add_foreign_key "ans2s", "subjects"
   add_foreign_key "ans2s", "users"
-  add_foreign_key "ans_3s", "subjects"
-  add_foreign_key "ans_3s", "users"
+  add_foreign_key "ans3s", "subjects"
+  add_foreign_key "ans3s", "users"
   add_foreign_key "comments", "subjects"
   add_foreign_key "comments", "users"
   add_foreign_key "subjects", "users"
