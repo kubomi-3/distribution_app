@@ -1,3 +1,9 @@
+/* リセット css */
+body {
+  font-size: 16px;
+  color: #333;
+  margin: 0 auto;
+}
 /* サインイン、サインアウト画面 */
 .registration_box, .session_box {
   margin: 30px 0 0 500px;
@@ -10,7 +16,7 @@ header {
   justify-content: space-around;
 }
 .header_title {
-  height: 50px;
+  line-height: 50px;
   margin: 0;
 }
 .header_link, .nav_link {
@@ -63,6 +69,13 @@ header {
 }
 .comment_form {
   margin-top: 30px;
+}
+.ans {
+  margin-right: 10px;
+  color: blue;
+}
+.mar-20 {
+  margin-right: 20px;
 }
 /* マイページ */
 .myp_box {

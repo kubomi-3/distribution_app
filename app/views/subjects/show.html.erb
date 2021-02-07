@@ -20,13 +20,15 @@
     <% else %>
        <div class="results">
          <h4 class="call">結果(投票済)</h4>
-         <div class="num">
-          <%= "a:#{@count1}票 b:#{@count2}票 c:#{@count3}票 総数#{@counts}票" %>
-         </div>
-         <div class="per">
-          <%= "a:#{@per1}% b:#{@per2}% c:#{@per3}%" %>
-         </div>
-        </div>
+         <ul>
+           <li>
+            <span class=mar-20><%= "a: #{@per1}%" %></span>
+            <span class=mar-20><%= "b: #{@per2}%" %></span>
+                               <%= "c: #{@per3}%" %>
+           </li>
+           <li><%= "総投票数: #{@counts}票" %></li>
+         </ul>
+       </div>
     <% end %>
   <% else %>
     <h4 class="call">投票や結果を見るにはログインする必要があります</h4>
