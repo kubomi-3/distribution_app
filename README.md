@@ -9,6 +9,12 @@ Distribution_app(集計アプリ)
 
 # 本番環境
 
+https://distribution-app.herokuapp.com/  
+
+ログイン情報（テスト用）
+- Eメール：nobita@sample
+- パスワード：111aaa
+
 # 制作背景(意図)
 
   様々なものの統計を取りたいと考え、作成し始めました。例えば好き色の割合や神の存在を信じる者の割合、
