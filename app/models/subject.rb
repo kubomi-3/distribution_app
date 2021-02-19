@@ -8,4 +8,12 @@ class Subject < ApplicationRecord
   has_many :ans_2s, dependent: :destroy
   has_many :ans_3s, dependent: :destroy
 
+  def self.search(search)
+    if search != ""
+      Subject.where('title LIKE(?)', "%#{search}%")
+    else
+      Subject.all
+    end
+  end
+
 end

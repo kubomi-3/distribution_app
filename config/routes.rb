@@ -3,6 +3,9 @@ Rails.application.routes.draw do
   root to: 'subjects#index'
   resources :subjects, only: [:index, :new, :create, :destroy, :show] do
     resources :comments, only: :create
+    collection do
+      get 'search'
+    end
   end
   resources :users, only: :show
   post '/subjects/:id/vote1', to: 'subjects#vote1'

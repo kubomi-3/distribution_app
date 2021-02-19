@@ -59,6 +59,10 @@ class SubjectsController < ApplicationController
     ans3.save
     redirect_to subject_path(subject_id)
   end
+
+  def search
+    @subjects = Subject.search(params[:keyword])
+  end
     
   private
   
