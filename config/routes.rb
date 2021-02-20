@@ -6,9 +6,11 @@ Rails.application.routes.draw do
     collection do
       get 'search'
     end
+    member do
+      post 'vote1'
+      post 'vote2'
+      post 'vote3'
+    end
   end
   resources :users, only: :show
-  post '/subjects/:id/vote1', to: 'subjects#vote1'
-  post '/subjects/:id/vote2', to: 'subjects#vote2'
-  post '/subjects/:id/vote3', to: 'subjects#vote3'
 end

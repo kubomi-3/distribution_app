@@ -25,13 +25,13 @@ class SubjectsController < ApplicationController
     ans1s = @subject.ans_1s
     ans2s = @subject.ans_2s
     ans3s = @subject.ans_3s
-    @count1 = ans1s.count
-    @count2 = ans2s.count
-    @count3 = ans3s.count
-    @counts = @count1 + @count2 + @count3
-    @per1 = ((@count1/@counts.to_f) * 100).round(1)
-    @per2 = ((@count2/@counts.to_f) * 100).round(1)
-    @per3 = ((@count3/@counts.to_f) * 100).round(1)
+    count1 = ans1s.count
+    count2 = ans2s.count
+    count3 = ans3s.count
+    @counts = count1 + count2 + count3
+    @per1 = ((count1/@counts.to_f) * 100).round(1)
+    @per2 = ((count2/@counts.to_f) * 100).round(1)
+    @per3 = ((count3/@counts.to_f) * 100).round(1)
   end
 
   def destroy
